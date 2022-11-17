@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import 'normalize.scss';
+@import 'variables.scss';
+
+body {
+  overflow: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.body {
+  max-width: 100%;
+  //min-height: 100vh;
+  height: 100vh;
+  position: relative;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+  background: var(--color-background-body);
+}
+
+.container {
+  background: var(--color-background-container);
+  color: var(--color-text-default);
+  margin-left: auto;
+  margin-right: auto;
+  width: 1280px;
+  height: 100vh;
+  position: relative;
+  padding: 2em 4em 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & > div {
+    display: flex;
+    animation-fill-mode: forwards;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1, 1;
+  }
+}
+
+.error {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5em;
+  color: var(--color-text-critical);
+  font-weight: 500;
+}
+
+
+.top {
+  height: 300px;
+  flex: 1 0 auto;
+  padding-top: 1em;
+  justify-content: flex-end;
+  flex-direction: column-reverse;
+  order: 1;
+
+  &.encryptable {
+    animation-name: swap-reverse;
+  }
+
+  &.decryptable {
+    animation-name: swap;
+    pointer-events: none;
+  }
+}
+
+.bottom {
+  height: 200px;
+  order: 2;
+  flex-direction: column;
+  position: relative;
+
+  & > div {
+    margin: 2em 0;
+  }
+
+  &.encryptable {
+    animation-name: swap;
+  }
+
+  &.decryptable {
+    animation-name: swap-reverse;
+  }
+}
+
+
+
+
+@keyframes swap {
+  from {
+    opacity: 1;
+    order: 1;
+    flex-direction: column-reverse;
+  }
+  49% {
+    opacity: 0;
+    order: 1;
+    flex-direction: column-reverse;
+  }
+  51% {
+    opacity: 0;
+    order: 2;
+    flex-direction: column;
+  }
+  to {
+    opacity: 1;
+    order: 2;
+    flex-direction: column;
+  }
+}
+
+
+@keyframes swap-reverse {
+  from {
+    opacity: 1;
+    order: 2;
+    flex-direction: column;
+  }
+  49% {
+    order: 2;
+    opacity: 0;
+    flex-direction: column;
+  }
+  51% {
+    order: 1;
+    opacity: 0;
+    flex-direction: column-reverse;
+  }
+  to {
+    opacity: 1;
+    order: 1;
+    //order: 2;
+    flex-direction: column-reverse;
+  }
+}
+
+@keyframes start {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

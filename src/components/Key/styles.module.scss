@@ -1,0 +1,34 @@
+.key {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  input {
+    width: 100%;
+    padding: 0.3em 2em 0.2em 1.7em;
+    height: 100%;
+    font-size: 1.5em;
+    border-top: 2px solid var(--color-background-body);
+    border-left: 2px solid var(--color-background-body);
+    border-bottom: var(--border-active);
+    border-right: var(--border-active);
+
+    &:focus + svg {
+      opacity: 1;
+    }
+  }
+
+  svg {
+    position: absolute;
+    left: 0.6em;
+    top: 50%;
+    height: 50%;
+    width: auto;
+    fill: var(--color-text-subdued);
+    transition: 0.4s;
+    opacity: 0.7;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+}

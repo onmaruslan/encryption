@@ -1,0 +1,23 @@
+.input {
+  border: var(--border-default);
+  outline: none;
+  border-radius: var(--border-radius);
+  background: var(--color-background-workspace);
+  width: 100%;
+  font-size: 1.1em;
+  padding: 0.4em 0.7em;
+}
+
+.inputWrapper {
+  position: relative;
+  width: auto;
+}
+
+.index {
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-text-warm)
+}

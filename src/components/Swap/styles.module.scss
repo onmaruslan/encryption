@@ -1,0 +1,32 @@
+.swap {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  svg {
+    width: auto;
+    height: 110%;
+    fill: var(--color-text-subdued);
+    //animation: loading 2s linear infinite;
+    transition: 0.4s;
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes loading {
+  from {
+    //transform: rotate(0);
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(0.5turn);
+    //transform: rotate(1turn);
+  }
+}

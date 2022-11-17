@@ -1,0 +1,13 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2.5em;
+  transition: 1s;
+
+  & > div {
+    &:first-of-type {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+}

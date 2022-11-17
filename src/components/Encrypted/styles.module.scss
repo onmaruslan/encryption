@@ -1,0 +1,81 @@
+.encrypted {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: var(--border-active);
+  border-top: none;
+  position: relative;
+}
+
+.input {
+  outline: none;
+  border: none;
+  padding: 0.3em 2em 0.2em 1em;
+  font-size: 1.1em;
+  width: 100%;
+  color: var(--color-text-warm);
+  transition: 0.6s;
+}
+
+.copyBtn {
+  width: auto;
+  position: absolute;
+  bottom: 0.4em;
+  right: 0.5em;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  * {
+    pointer-events: none;
+  }
+
+  svg {
+    width: auto;
+    height: 100%;
+    fill: var(--color-text-subdued);
+    transition: 0.5s;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &.animation {
+    pointer-events: none;
+
+    svg {
+      animation-direction: alternate;
+      animation-name: copy;
+      animation-duration: 0.5s;
+      animation-iteration-count: 2;
+    }
+
+    & + input {
+      color: var(--color-background-default);
+    }
+  }
+}
+
+.encryptable {
+  input {
+    pointer-events: none;
+  }
+}
+
+
+@keyframes copy {
+  from {
+    fill: var(--color-text-subdued);
+    transform: scale(1);
+  }
+
+  to {
+    fill: var(--color-background-default);
+    transform: scale(1.1);
+  }
+}

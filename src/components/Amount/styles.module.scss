@@ -1,0 +1,27 @@
+.amount {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.7s;
+  z-index: 9;
+}
+
+.input {
+  height: 1.7em;
+  width: 2.7em;
+  transition: 0.3s;
+  text-align: center;
+  font-size: 1.5em;
+  border: var(--border-default);
+  border-top: none;
+
+  &:focus {
+    border: var(--border-active);
+    border-top: none;
+  }
+}
+
+.decryptable {
+  opacity: 0;
+}
