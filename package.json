@@ -1,6 +1,7 @@
 {
   "name": "encryption",
   "version": "0.1.0",
+  "homepage": "https://onmaruslan.github.io/encryption",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
@@ -10,7 +11,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://onmaruslan.github.io/encryption",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

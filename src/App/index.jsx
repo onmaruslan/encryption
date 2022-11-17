@@ -37,6 +37,7 @@ function App () {
       }, 350)
     }
     setEncryptable(prev => !prev)
+    setError('')
   }
 
   useEffect(() => setArraySeedPhrase(Array(+amountPhrases).fill('')), [amountPhrases])
