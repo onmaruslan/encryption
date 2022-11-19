@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 2.5em;
-  grid-row-gap: 2.3em;
+  grid-row-gap: 2em;
   overflow: auto;
   transition: 1s;
   animation-fill-mode: forwards;
